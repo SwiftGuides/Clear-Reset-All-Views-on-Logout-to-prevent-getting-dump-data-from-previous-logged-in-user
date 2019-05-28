@@ -16,7 +16,7 @@ Use this code to clear data of all view objects on logout to prevent dump data o
                                     userdefault.removeObject(forKey: MaindataKey)
                                     userdefault.set(false, forKey: "LoginCheck")
                    
-                   //Below are the codes to clean data on Logout
+                                    //Below are the codes to clean data on Logout
                                     
                                     let toViewController = mainStoryboard.instantiateViewController(withIdentifier: "KSLoginViewController") as! KSLoginViewController// Login view controller here
                                     let fromView = UIApplication.shared.keyWindow!.rootViewController!.view
@@ -51,6 +51,7 @@ Use this code to clear data of all view objects on logout to prevent dump data o
                                         
                                         
                                         // Method to implement naviagtion controller to work pusviewcontroller on login screen
+                                        
                                         let teacher = studentStoryboard.instantiateViewController(withIdentifier: "KSStudentDashboardVC") as! KSStudentDashboardVC
                                         let aObjNavi = UINavigationController(rootViewController: teacher)
                                         let appDelegate: AppDelegate = (UIApplication.shared.delegate as? AppDelegate)!
